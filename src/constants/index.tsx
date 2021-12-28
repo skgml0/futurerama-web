@@ -71,7 +71,7 @@ export const ROUTES = [
   },
   {
     ID: 5,
-    PATH: "/invent",
-    LABEL: "Invent",
+    PATH: "/inventory",
+    LABEL: "Inventory",
   },
 ];
