@@ -15,6 +15,4 @@ export interface CharacterData {
     occupation: string,
     sayings: [string],
     species: string
-
-
 }
