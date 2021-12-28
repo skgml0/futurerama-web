@@ -20,16 +20,17 @@ const InventoryPage: NextPage = () => {
       {/* <h1> Question </h1> */}
       {data.map((questions: QuestionsData) => {
         const { question, possibleAnswers, correctAnswer,id } = questions;
-        console.log( possibleAnswers )
+        
         return (
           <Questionscard key={`futurama-questions-${id}`}>
             <Cardnum>{id}. {question}</Cardnum>
            <Radioselect>
-                {possibleAnswers.map((ex, index) => {
+           
+                {possibleAnswers.map((ex, index: number) => {
                     return (
                         <div>
-                            <input type="radio" id={index} value={ex} name={`anser${id}`} />
-                            <label for={index}>{ex}</label>
+                            <input type="radio" id={String(index)} value={ex} name={`anser${id}`} />
+                            <label htmlFor={String(index)}>{ex}</label>
                         </div>
                     )}
                 )}
