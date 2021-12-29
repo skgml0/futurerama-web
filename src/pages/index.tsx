@@ -18,9 +18,11 @@ const Home: NextPage = () => {
 const Mainimg = styled.img`
   position: float;
   float: left;
-  width: 400px;
+  max-width: 90%;
   margin-top: 5%;
-  
+  @media screen (max-width: 700px){
+    max-width: 400px;
+  }
 `;
 const FontBox = styled.div`
   position: absolute;
