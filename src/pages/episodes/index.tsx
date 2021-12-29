@@ -21,7 +21,7 @@ const EpisodesIndexPage: NextPage = () => {
                         {/* <Profile src={images.main} alt="" /> */}
         
                         <E_Title>{number}. {title}</E_Title>
-                        <p>{originalAirDate}. {writers}</p>
+                        <Writers>{originalAirDate}. {writers}</Writers>
                         <EpisodesStory>{desc}</EpisodesStory>
     
                     </EpisodesCard>
@@ -30,6 +30,7 @@ const EpisodesIndexPage: NextPage = () => {
         </EpisodesContainer>
     )
 }
+export default EpisodesIndexPage;
 const EpisodesContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -51,26 +52,24 @@ const EpisodesCard = styled.div`
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    height: 250px;
+    height: 200px;
     width: 400px;
     text-align: center;
     background-color: #f7f7c9;
     color: #919178;
-    margin-top: 7%;
+    margin: 3% 0;
+    border: 2px solid #68685b;
 `
 const E_Title = styled.h2`
-    font-size: 20px;
+    font-size: 22px;
     color: black;
     font-weight: 600;
-    margin: 4% 0;
+    margin: 3%;
 `
-const Person = styled.img`
-    height: 200px;
-    /* aspect-ratio: 9 / 16; */
-    object-fit: contain;
-    border : 2px solid #c9c0c0;
-    border-radius: 25%;
-    margin-top: 10px;
+const Writers = styled.p`
+    font-size: 16px;
+    color: #464242;
+    margin-bottom: 3%;
 `
 const EpisodesStory = styled.small`
     white-space: normal;
@@ -78,6 +77,5 @@ const EpisodesStory = styled.small`
     -webkit-line-clamp: 4; 
     -webkit-box-orient: vertical;
     overflow: hidden;
-    margin: 0 5%;
+    margin: 5% 5%;
 `
-export default EpisodesIndexPage;
