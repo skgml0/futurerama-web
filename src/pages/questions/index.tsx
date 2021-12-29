@@ -3,10 +3,10 @@ import type { NextPage } from "next";
 import useSWR from "swr";
 import { QuestionsData } from "../../types/questions";
 import styled from "@emotion/styled";
-import Link from "next/link";
+
 
 const fetcher = (url: string) => axios(url).then((res) => res.data);
-const InventoryPage: NextPage = () => {
+const QuestionsPage: NextPage = () => {
   const { data, error } = useSWR(
     "https://api.sampleapis.com/futurama/questions",
     fetcher
@@ -80,4 +80,4 @@ const Story = styled.p`
   line-height: 1.7;
 `;
 
-export default InventoryPage;
+export default QuestionsPage;
