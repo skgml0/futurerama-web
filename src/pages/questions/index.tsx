@@ -55,7 +55,6 @@ const Container = styled.div`
   @media (max-width: 1200px) {
     grid-template-columns: repeat(1, 1fr);
   }
-  /* height: 100vh; */
   padding-top: 5%;
 `;
 const Questionscard = styled.div`
