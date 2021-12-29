@@ -25,7 +25,6 @@ const QuestionsPage: NextPage = () => {
           <Questionscard key={`futurama-questions-${id}`}>
             <Cardnum>{id}. {question}</Cardnum>
            <Radioselect>
-           
                 {possibleAnswers.map((ex, index: number) => {
                     return (
                         <div>
@@ -43,6 +42,8 @@ const QuestionsPage: NextPage = () => {
     </Container>
   );
 };
+export default QuestionsPage;
+
 const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -72,12 +73,5 @@ const Cardnum = styled.p`
 const Radioselect = styled.div`
     margin-left: 5%;
 `
-const Mainimg = styled.img`
-  height: 300px;
-  
-`;
-const Story = styled.p`
-  line-height: 1.7;
-`;
 
-export default QuestionsPage;
+
