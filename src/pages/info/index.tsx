@@ -43,7 +43,6 @@ const InfoIndexPage: NextPage = () => {
   );
 };
 const Container = styled.div`
-  background: #3989c7;
   width: 100%;
   height: 100%
   color: white;
