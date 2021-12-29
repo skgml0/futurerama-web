@@ -1,9 +1,6 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import styled from "@emotion/styled";
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
-</style>;
+
 const Home: NextPage = () => {
   return (
     <div>
@@ -21,8 +18,9 @@ const Home: NextPage = () => {
 const Mainimg = styled.img`
   position: float;
   float: left;
-  height: 550px;
+  width: 400px;
   margin-top: 5%;
+  
 `;
 const FontBox = styled.div`
   position: absolute;
@@ -36,9 +34,14 @@ const MainTitle = styled.p`
   color: #171825;
   padding-left: 30px;
   text-shadow: 1px 1px 0 #eaeaea, -1px -1px 0 #232323;
+  animation-name : myanimation;
+    animation-duration : 2s;
+    animation-iteration-count : 1;
+    animation-fill-mode: forwards;
   @media (max-width: 1200px) {
     font-size: 60px;
     color: #eee;
   }
 `;
+
 export default Home;
